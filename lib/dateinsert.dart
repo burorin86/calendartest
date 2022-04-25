@@ -12,19 +12,20 @@ class dateinsert extends StatelessWidget {
     return MaterialApp(
       title: 'Welcome to Flutter',
       home: Scaffold(
+        backgroundColor: Colors.white70,
         appBar: AppBar(
           title: Row(
             children:  [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(right: 40),
                 child: IconButton(
                   onPressed: (){
                     Navigator.of(context).pop();
                     },
-                  icon: Icon(Icons.add),
+                  icon: const Icon(Icons.clear),
                 ),
               ),
-              Text('予定の追加'),
+              const Text('予定の追加'),
             ],
           ),
           actions: [
@@ -50,8 +51,112 @@ class dateinsert extends StatelessWidget {
             ),
           ],
         ),
-        body: const Center(
-          child: Text('Hello World'),
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.rectangle,
+                  border: Border.all(
+                    color: Colors.blue,
+                    width: 1.0,
+                  ),
+                ),
+                child: const TextField(
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                    hintText: 'タイトルを入れてください',
+                    border: InputBorder.none,
+
+                  ),
+                ),
+              ),
+            ),
+             Padding(
+              padding: const EdgeInsets.only(left: 8.0,right: 8.0,bottom: 2.0),
+               child: Container(
+                 // color: Colors.white,
+                 height: 50,
+                 decoration: const BoxDecoration(
+                   shape: BoxShape.rectangle,
+                   color: Colors.white,
+                   // border: Border.all(
+                   //   color: Colors.blue,
+                   //   width: 1.0,
+                   // ),
+                 ),
+               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0,right: 8.0,bottom: 2.0),
+              child: Container(
+                // color: Colors.white,
+                height: 50,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  color: Colors.white
+                  // border: Border.all(
+                  //   color: Colors.blue,
+                  //   width: 1.0,
+                  // ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0,right: 8.0),
+              child: Container(
+                // color: Colors.white,
+                height: 50,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  color: Colors.white,
+                  // border: Border.all(
+                  //   color: Colors.blue,
+                  //   width: 1.0,
+                  // ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0,right: 8.0),
+              child: Container(
+                // color: Colors.white,
+                height: 50,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  color: Colors.white,
+                  // border: Border.all(
+                  //   color: Colors.blue,
+                  //   width: 1.0,
+                  // ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 100,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.rectangle,
+                  border: Border.all(
+                    color: Colors.blue,
+                    width: 1.0,
+                  ),
+                ),
+                child: const TextField(
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                    hintText: 'コメントを入力して下さい',
+                    border: InputBorder.none,
+
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
